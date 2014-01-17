@@ -1,0 +1,60 @@
+<!-- extracted from https://gist.github.com/magican/5574556 -->
+ 
+<style>
+  #toc {
+    overflow-y: scroll;
+    max-height: 500px;
+    padding: 10px 10px 0px 10px;
+  }
+  #toc-wrapper {
+    max-width:395px;
+    border: thin solid rgba(0, 0, 0, 0.38); 
+    border-radius: 5px; 
+    background-color: #f7f7f7; 
+    clear: both;
+    margin-top: 25px;
+    margin-left: 5px;
+    z-index: 100;
+  }
+  #toc-wrapper.closed {
+      min-width: 100px;
+      width: auto;
+      transition: width;
+  }
+  #toc-wrapper:hover{
+      opacity:1;
+  }
+  #toc-wrapper .header {
+      font-size:15px; 
+      font-weight: bold;
+      padding: 8px;
+      text-align: center;
+  }
+
+  #toc ol {
+    margin-left: 0px;
+  }
+
+  #toc ol ol {
+    margin-left: 15px;
+  }
+
+  #toc-wrapper .hide-btn {
+      font-size: 12px;
+  }
+ 
+</style>
+
+<style>
+  ol.nested {
+    counter-reset: item;
+    list-style: none;
+  }
+  li.nested {
+        display: block;
+    }
+  li.nested:before {
+        counter-increment: item;
+        content: counters(item, ".")" ";
+    }
+</style>
